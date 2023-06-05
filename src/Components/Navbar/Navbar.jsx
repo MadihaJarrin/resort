@@ -40,11 +40,9 @@ const Navbar = () => {
   return (
     <>
       <section
-        className={`px-5 py-3 flex items-center ${
-          isSticky ? "sticky top-0 bg-slate-400" : ""
-        } ${
-          location.pathname === "/" ? "absolute" : "bg-slate-400"
-        } w-full animation z-50`}
+        className={`px-5 py-3 flex items-center ${isSticky ? "sticky top-0 bg-slate-400" : ""
+          } ${location.pathname === "/" ? "absolute" : "bg-slate-400"
+          } w-full animation z-50`}
       >
         <div className="md:w-1/2 w-full flex md:gap-10 items-center justify-between md:justify-normal">
           <div className="md:w-10 w-6 md:h-10 h-6">
@@ -186,7 +184,8 @@ const Navbar = () => {
                     <li>
                       <a className="justify-between">Profile</a>
                     </li>
-
+                    {user?.email === "admin.resort@gmail.com" && <li>
+                      <Link to="/manage">Manage</Link></li>}
                     <li>
                       <button onClick={() => logOut()}>Logout</button>
                     </li>
@@ -247,6 +246,7 @@ const Navbar = () => {
               >
                 Service
               </NavLink>
+
               <NavLink
                 className="btn btn-ghost hover:btn-primary focus:btn-error animation"
                 to="/about"

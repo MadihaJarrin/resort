@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { ContextApi } from "../Context/ContexApi";
+import { resorts } from "../../Data/index"
 import { Tilt } from "react-tilt";
 import { Link } from "react-router-dom";
 
@@ -10,11 +11,12 @@ const Service = () => {
     scale: 1,
     speed: 450,
   };
+  const data = services || resorts
   return (
     <>
       <section className=" flex flex-col gap-5 items-center md:my-5 my-2.5">
         <div className="container flex  flex-wrap mx-auto justify-center gap-4">
-          {services?.map((resort, index) => (
+          {resorts?.map((resort, index) => (
             <Tilt
               options={options}
               key={index}

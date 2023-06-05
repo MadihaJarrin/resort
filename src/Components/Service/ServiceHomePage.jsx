@@ -12,12 +12,13 @@ const ServiceHomePage = () => {
     scale: 1,
     speed: 450,
   };
+  const data = services || resorts
   return (
     <>
       <section className="flex flex-col gap-5 items-center md:my-5 my-2.5">
         <p className="headline text-center p-2 ">Our Resorts</p>
         <div className="container flex  flex-wrap mx-auto justify-center gap-4">
-          {services?.slice(0, 4).map((resort, index) => (
+          {resorts?.slice(0, 4).map((resort, index) => (
             <Tilt
               options={options}
               key={index}

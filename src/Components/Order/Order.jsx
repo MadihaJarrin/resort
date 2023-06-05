@@ -80,6 +80,7 @@ const Order = () => {
               transition={{ duration: 0.3 }}
               className="flex flex-col   gap-5"
             >
+              <p>check In Date</p>
               <input
                 type="date"
                 placeholder="Check-in Date"
@@ -88,6 +89,7 @@ const Order = () => {
                 className="input input-bordered input-accent w-full max-w-xs"
                 required
               />
+              <p>Check Out Date</p>
               <input
                 type="date"
                 placeholder="Check-out Date"
